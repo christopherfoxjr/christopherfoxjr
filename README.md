@@ -1,6 +1,6 @@
 ## Hi there 👋
 I'm Christopher Fox Junior. But you can call me Chirstopher, or even Chris if you wanted.
-I am a 14-yo Linux enthusiast and the CEO/Founder of @WolfTech-Innovations 
+I am a 15-yo Linux enthusiast and the CEO/Founder of @WolfTech-Innovations 
 
 My hobbies are: Linux . . . yeah that's all.
 
