@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chris Fox Jr</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;800&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #2a2a2e;
+      --surface: #323236;
+      --white: #f0f0f0;
+      --dim: #9a9aaa;
+      --accent: #0891b2;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'DM Mono', monospace;
+      min-height: 100vh;
+      padding: 0 24px 80px;
+    }
+
+    header {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 0 48px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--surface);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      flex-shrink: 0;
+      border: 2px solid var(--accent);
+    }
+
+    .header-text h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.1;
+      color: var(--white);
+    }
+
+    .header-text p {
+      font-size: 0.8rem;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-bottom: 52px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    section:nth-child(2) { animation-delay: 0.1s; }
+    section:nth-child(3) { animation-delay: 0.2s; }
+    section:nth-child(4) { animation-delay: 0.3s; }
+    section:nth-child(5) { animation-delay: 0.4s; }
+
+    .label {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--dim);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--surface);
+    }
+
+    .bio {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--white);
+      max-width: 560px;
+    }
+
+    .meta-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .meta-list li {
+      font-size: 0.85rem;
+      color: var(--dim);
+      display: flex;
+      gap: 14px;
+      align-items: baseline;
+    }
+
+    .meta-list li span.key {
+      color: var(--accent);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      min-width: 70px;
+      flex-shrink: 0;
+    }
+
+    .meta-list a {
+      color: var(--white);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .meta-list a:hover { border-color: var(--accent); }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      background: var(--surface);
+      border-radius: 4px;
+      font-size: 0.78rem;
+      color: var(--dim);
+      transition: color 0.2s;
+    }
+
+    .skill-chip:hover { color: var(--white); }
+
+    .skill-chip img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+    }
+
+    .socials {
+      display: flex;
+      gap: 16px;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: var(--dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .social-link:hover { color: var(--white); }
+
+    .social-link img {
+      width: 22px;
+      height: 22px;
+      filter: invert(1) brightness(0.5);
+      transition: filter 0.2s;
+    }
+
+    .social-link:hover img {
+      filter: invert(1) brightness(1);
+    }
+
+    .stats-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .stats-row img {
+      max-width: 100%;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .follower-badge {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .follower-badge img {
+      border-radius: 4px;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 500px) {
+      header { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="avatar">🐺</div>
+    <div class="header-text">
+      <h1>Chris Fox Jr</h1>
+      <p>That one tech kid</p>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <div class="label">About</div>
+      <p class="bio">
+        I've been learning about Linux for 4 years and I make operating systems for any reason — mainly for fun or my company. I'm a protogen wolf-type furry and love Gravity Falls.
+      </p>
+    </section>
+
+    <section>
+      <div class="label">Details</div>
+      <ul class="meta-list">
+        <li><span class="key">Location</span> Missouri</li>
+        <li><span class="key">Email</span> <a href="mailto:spoinkosgithub@gmail.com">spoinkosgithub@gmail.com</a></li>
+        <li><span class="key">Ask me</span> That's it :3</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="label">Skills</div>
+      <div class="skills-grid">
+        <div class="skill-chip">
+          <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg" alt="Git" />
+          Git
+        </div>
+        <div class="skill-chip">
+          <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/gnubash-colored.svg" alt="Bash" />
+          Bash
+        </div>
+        <div class="skill-chip">
+          <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/visualstudiocode-colored.svg" alt="VS Code" />
+          VS Code
+        </div>
+        <div class="skill-chip">
+          <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" alt="HTML5" />
+          HTML5
+        </div>
+        <div class="skill-chip">
+          <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/metamask-colored.svg" alt="MetaMask" />
+          MetaMask
+        </div>
+        <div class="skill-chip">
+          <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/ethereum-colored.svg" alt="Ethereum" />
+          Ethereum
+        </div>
+        <div class="skill-chip">
+          <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/googlecloud-colored.svg" alt="Google Cloud" />
+          Google Cloud
+        </div>
+        <div class="skill-chip">
+          <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/raspberrypi-colored.svg" alt="Raspberry Pi" />
+          Raspberry Pi
+        </div>
+        <div class="skill-chip">
+          <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/linux-colored.svg" alt="Linux" />
+          Linux
+        </div>
+        <div class="skill-chip">
+          <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/ubuntu-colored.svg" alt="Ubuntu" />
+          Ubuntu
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="label">Socials</div>
+      <div class="socials">
+        <a href="https://www.github.com/christopherfoxjr" target="_blank" rel="noreferrer" class="social-link">
+          <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github.svg" alt="GitHub" />
+          GitHub
+        </a>
+        <a href="https://discord.com/users/thefluffygoober" target="_blank" rel="noreferrer" class="social-link">
+          <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/discord.svg" alt="Discord" />
+          Discord
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <div class="label">GitHub Stats</div>
+      <div class="follower-badge">
+        <img src="https://img.shields.io/github/followers/christopherfoxjr?logo=github&style=for-the-badge&color=0891b2&labelColor=1c1917" alt="Followers" />
+      </div>
+      <div class="stats-row">
+        <img
+          src="https://github-readme-stats.vercel.app/api?username=christopherfoxjr&show_icons=true&count_private=true&title_color=0891b2&text_color=ffffff&icon_color=0891b2&bg_color=323236&hide_border=true"
+          alt="GitHub Stats"
+        />
+        <img
+          src="https://github-readme-streak-stats.herokuapp.com/?user=christopherfoxjr&stroke=ffffff&background=323236&ring=0891b2&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true"
+          alt="GitHub Streak"
+        />
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
