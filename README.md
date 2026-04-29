@@ -8,5 +8,3 @@ My hobbies are: Linux . . . yeah that's all.
 My intrests are: Linux, AI, Learning stuff.
 
 My three favorite things: Linux, cats, coffee.
-
-![1000002404](https://github.com/user-attachments/assets/2fccec84-7843-43c9-acad-4451ee0d1fab)
