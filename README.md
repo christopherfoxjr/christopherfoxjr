@@ -1,7 +1,7 @@
 Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif) My name is Chris Fox Jr
 =====================================================================================================================================
 
-That one tech kid
+That one 15-yr tech kid
 -----------------
 
 I've been learning about Linux for 4 years and I make operating systems for any reason, mainly for fun or my company of course. I'm a protogen wolf-type furry and love Gravity falls
